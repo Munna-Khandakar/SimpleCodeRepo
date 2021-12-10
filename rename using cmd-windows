@@ -1,0 +1,1 @@
+Get-Item .\*.mp3 |Rename-Item -NewName { $($_.BaseName -replace "OnlyMP3.net","") + $_.Extension }
