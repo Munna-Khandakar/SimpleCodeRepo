@@ -1,0 +1,34 @@
+// Given an integer x, return true if x is palindrome integer.
+
+// An integer is a palindrome when it reads the same backward as forward.
+
+// For example, 121 is a palindrome while 123 is not.
+
+/**
+ * @param {number} x
+ * @return {boolean}
+ */
+var isPalindrome = function(x) {
+    
+    if (x < 0) return false;
+    if (x < 10) return true;
+    if (x % 10 === 0) return false;
+    
+    let org  = x;
+    let rev = 0;
+    let rem = 0;
+    
+    while(org > 0){
+        rem = org % 10;
+        rev = rev * 10 + rem;
+        // Math.trunc() returns only the integer part...
+        org = Math.trunc(org / 10);
+        
+    }
+    
+    if(rev === x){
+        return true;
+    }else{
+        return false;
+    }
+};
