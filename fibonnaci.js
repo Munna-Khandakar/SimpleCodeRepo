@@ -27,5 +27,17 @@ function FibonacciByMap(n) {
   }
 }
 
+
+// function fibonnaci for printing upto n using recursion
+const FibonacciByRecursion = (n)=>{
+  if(n===0) return 0;
+  if(n === 1) return 1;
+  return FibonacciByRecursion(n-1)+FibonacciByRecursion(n-2);
+}
+
+
+
+const a = FibonacciByRecursion(8);
+console.log(a)
 FibonacciByLoop(9)
 FibonacciByMap(9)
