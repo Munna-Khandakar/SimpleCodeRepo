@@ -1,0 +1,8 @@
+// check first
+
+find . -name "*.bak" -type f
+
+// delete
+  
+find . -name "*.bak" -type f -delete
+
